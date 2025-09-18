@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Motivation Quotes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header class="quote">
+   <h1>🌟 Daily Motivation </h1>
+    <p> Fuel your day with positivity</p>
+  </header>
+
+
+
+    <section>
+    <div class="card-bg">
+           <h3>📜 Quote of the Day</h3>
+           <p id="main-quote">
+             "Believe in yourself"
+             <br>
+               <small>— Motivation</small>
+            </p>
+          
+           <p>❤️ <span id="likes">12</span> Likes</p>
+       </div>
+   </section>
+
+
+   <section id="actions">
+    <a href="#">
+      <button id="btn-random">🔄 New Random Quote</button>
+    </a>
+    
+    <a href="http://localhost:8080/Quotes/new">
+      <button id="btn-add">➕ Add Quote</button>
+    </a>
+  </section>
+
+
+   
+
+
+   <!-- Search & Filter -->
+  <section id="search-filter">
+    <input type="text" id="search" placeholder="🔍 Search quotes...">
+    <select id="filter">
+      <option value="">Filter by category</option>
+    </select>
+  </section>
+
+  <!-- All Quotes -->
+    <h3>📋 All Quotes List</h3>
+  <section id="all-quotes">
+  <div class="quotes-container">
+    
+        <% Quotes.forEach(q =>{ %>
+          <a  href="/Quotes/<%= q.id %>" class="quote-card">
+            <p><%= q.text %></p>
+             <span class="badge"> Author : <%= q.author%></span>
+             <br>
+      <span class="badge">Category :  <%= q.category %></span>
+      </a>
+      <%}); %>    
+   </div>
+   
+  </section>
+
+   
+   
+</body>
+</html>

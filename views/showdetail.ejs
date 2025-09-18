@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Show Quote</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+<body>
+    <div class="quotes-details">
+    <a href="/Quotes"> ⬅ Back to Quotes</a>
+    
+    <h1> <%= quotes.text %></h1>
+    <p> Quote ID : <%= quotes.id %></p>
+    <p><%= quotes.author%></p>
+    <p><%= quotes.category %></p>
+    </div>
+    <section id="action-btn">
+        <a href="/Quotes/<%= quotes.id %>/edit">
+            <button id="Edit-btn"><i class="fa-solid fa-pencil"></i> Edit</button>
+        </a>
+        <form method="POST" action="/Quotes/<%= quotes.id %>?_method=DELETE">
+             <button id="delete-btn"> <i class="fas fa-trash-alt"></i> Delete</button>
+        </form>
+        
+    </section>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Quote</title>
+</head>
+<body>
+    <h2> Edit Quote</h2>
+    <p> Quote ID : <%= quotes.id%></p>
+    <p> Category :  <%= quotes.category %></p>
+    <form method="POST"  action="/Quotes/<%=quotes.id %>?_method=PATCH">
+        <textarea row="10" cols="30" name="text"><%= quotes.text %></textarea>
+     <button> submit</button>
+    </form>
+</body>
+</html>

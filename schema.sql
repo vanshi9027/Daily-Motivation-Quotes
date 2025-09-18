@@ -1,0 +1,11 @@
+CREATE DATABASE DailyQuotes;
+USE DailyQuotes;
+
+
+CREATE TABLE Quotes(
+    id INT NOT NULL AUTO_INCREMENT,
+    text VARCHAR(255) NOT NULL,
+    author VARCHAR(100) NOT NULL,  
+    category VARCHAR(100) NOT NULL,
+    PRIMARY KEY(id)
+);
